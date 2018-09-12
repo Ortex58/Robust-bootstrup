@@ -21,17 +21,17 @@ gulp.task('sass', function() {
 
 		.pipe(sass({errLogToConsole: true}))
         .pipe(gulp.dest('./css/'))
-        //.pipe(server.reload({stream: true}));
+        .pipe(server.reload({stream: true}));
 });
 
 //Watch task
 gulp.task('start', ['sass'], function() {
-	//server.init({
-	//	server: "."
-//	});
-	//gulp.run('sass');
+	server.init({
+		server: "."
+	});
+	gulp.run('sass');
 
     gulp.watch('sass/**/*.scss',['sass']);
-//	gulp.watch("*.html")
-//	.on("change", server.reload);
+	gulp.watch("*.html")
+	.on("change", server.reload);
 });
