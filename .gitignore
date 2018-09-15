@@ -1,3 +1,8 @@
+<<<<<<< HEAD
 node_modules/
 gulpfile.js
+=======
+node_modules/
+gulpfile.js
+>>>>>>> d76136af79d0dacfc0e33d9c7ca443c0109dc0b3
 package.json
